@@ -15,8 +15,3 @@ body{
     background-color: #ADD8E6;
     transition:all ease 0.5s;
 }
-
-#sustarch:hover{
-    font-size:1.05rem;
-    transition:all ease 0.5s;
-}
