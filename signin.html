@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Login Form</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f4f8;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            width: 100%;
+            max-width: 800px; /* Keep this for PC view */
+            padding: 20px;
+        }
+
+        .image {
+            width: 300px; 
+            height: 300px; 
+            border-radius: 1rem;
+            margin-right: 1rem;
+            background: url('./images/iot3.jpg') no-repeat center center;
+            background-size: cover;
+        }
+
+        #loginForm {
+            padding: 20px;
+            width: 300px;
+            background-color: #f44336;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+        }
+
+        #loginForm label {
+            font-size: 14px;
+            color: white;
+            margin-bottom: 5px;
+        }
+
+        #loginForm input {
+            width: 90%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        #loginForm button {
+            width: 90%;
+            padding: 10px;
+            background-color: white;
+            color: #f44336;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        #loginForm button:hover {
+            background-color: #ffe0e0;
+        }
+
+        #nav {
+            background-color: #f44336; /* Set the background color to match the form theme */
+        }
+
+        #nav a {
+            color: white; /* Ensure the links have white color */
+        }
+
+        #nav h4, #nav i {
+            color: white; /* Set icon and text color to white */
+        }
+
+        #right a {
+            color: white; /* Set the About us link color to white */
+        }
+
+        #btn1 a {
+            color: white; /* Set Sign In link color to white */
+        }
+
+        /* Mobile View: Stack the image and form properly */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column; /* Stack the image and form vertically */
+                padding: 10px; /* Reduce padding for mobile */
+                max-width: 100%; /* Allow form to take full width */
+            }
+
+            .image {
+                width: 100%; /* Image will take full width */
+                height: 250px; /* Keep a fixed height */
+                margin-bottom: 20px; /* Space between image and form */
+            }
+
+            #loginForm {
+                width: 100%;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="nav" class="h-16 w-full fixed top-0 z-10 left-0 p-1">
+        <a href="./index.html" style="text-decoration: none;">
+            <h2 id="sustarch" class="absolute top-1/2 -translate-y-1/2 left-10 font-semibold text-base md:text-2xl text-white">Sustainable Automation</h2>
+        </a>
+        <div id="right" class="absolute right-0 top-1/2 -translate-y-1/2 mr-10 flex items-center gap-4 md:gap-6">
+            <a href="./aboutus.html" class="hidden md:visible">
+                <h4>About us</h4>
+            </a>
+            <h4 id="btn1" class="p-2 h-10 w-20 cursor-pointer border-white border-2 hidden items-center justify-center rounded-md md:flex">
+                <a href="./signin.html">Sign in</a>
+            </h4>
+            <i class="fa-solid fa-bell cursor-pointer text-base md:text-xl"></i>
+        </div>
+    </div>
+    
+    <div class="container md:w-1/2">
+        <div class="image hidden md:block"></div>
+        <form id="loginForm">
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" placeholder="Enter your password" required>
+            <button type="button" id="submit">New Account</button>
+            <button type="button" id="login" class="mt-3">Login</button>
+        </form>
+    </div>
+</body>
+<script src="firebase.js" type="module"></script>
+</html>
