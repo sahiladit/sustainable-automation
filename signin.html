@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Login Form</title>
+    <title>Login</title>
     <style>
         body {
             margin: 0;
@@ -28,7 +28,7 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             overflow: hidden;
             width: 100%;
-            max-width: 800px; /* Keep this for PC view */
+            max-width: 800px; 
             padding: 20px;
         }
 
@@ -84,7 +84,7 @@
         }
 
         #nav {
-            background-color: #f44336; /* Set the background color to match the form theme */
+            background-color: #2ECC71; /* Set the background color to match the form theme */
         }
 
         #nav a {
@@ -92,7 +92,7 @@
         }
 
         #nav h4, #nav i {
-            color: white; /* Set icon and text color to white */
+            color: white;
         }
 
         #right a {
@@ -103,7 +103,6 @@
             color: white; /* Set Sign In link color to white */
         }
 
-        /* Mobile View: Stack the image and form properly */
         @media (max-width: 768px) {
             .container {
                 flex-direction: column; /* Stack the image and form vertically */
@@ -133,9 +132,7 @@
             <a href="./aboutus.html" class="hidden md:visible">
                 <h4>About us</h4>
             </a>
-            <h4 id="btn1" class="p-2 h-10 w-20 cursor-pointer border-white border-2 hidden items-center justify-center rounded-md md:flex">
-                <a href="./signin.html">Sign in</a>
-            </h4>
+
             <i class="fa-solid fa-bell cursor-pointer text-base md:text-xl"></i>
         </div>
     </div>
