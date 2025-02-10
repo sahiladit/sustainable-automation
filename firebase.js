@@ -27,16 +27,15 @@ const passwordField = document.getElementById("password");
 const submitButton = document.getElementById("submit");
 const loginbtn = document.getElementById("login");
 
-// Function to save data in Firestore
 const savedata = async (email, password) => {
     try {
         const docRef = await addDoc(collection(db, "users"), {
             email: email,
-            password: password, // Avoid storing raw passwords in the database.
+            password: password, 
         });
-        console.log("Document written with ID: ", docRef.id);
+        alert("Account created Succeessfully");
     } catch (err) {
-        console.error("Error adding document: ", err.message);
+        alert("Error adding document: ", err.message);
     }
 };
 
@@ -64,10 +63,8 @@ loginbtn.addEventListener("click", () => {
     signInWithEmailAndPassword(auth, email, password)
         .then((res) => {
             alert("Login successful");
-            console.log(res.user);
         })
         .catch((err) => {
             alert(err.message);
-            console.error(err.code, err.message);
         });
 });
